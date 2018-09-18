@@ -40,6 +40,8 @@ namespace SecondWinFormsAssignment
            
             float poäng = crs.PoängPerKursDag();
             MessageBox.Show("Antal poäng per kursdag: " + poäng);
+            Form1.ActiveForm.Close();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
