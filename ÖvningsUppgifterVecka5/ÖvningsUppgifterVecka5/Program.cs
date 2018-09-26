@@ -48,7 +48,7 @@ namespace ÖvningsUppgifterVecka5
             {
                 Console.WriteLine(tal[i]);
             }
-            */
+            
 
             string[] bilar = { "Volvo", "BMW", "Audi", "Skoda",
                                 "Toyota", "Ford", "Mercedes","Seat", "Honda",
@@ -89,6 +89,68 @@ namespace ÖvningsUppgifterVecka5
             {
                 Console.WriteLine(item);
             }
+            */
+
+            string[] bands = { "ACDC", "Queen", "Aerosmith", "Iron Maiden", "Megadeth",
+                                "Metallica", "Pearl Jam", "Oasis", "Abba", "Blur", "Eurythmics", "Genesis",
+                                   "INXS", "Midnight Oil", "Kent", "Madness", "Manic Street Preachers",
+                                    "The Offspring", "Pink Floyd", "Rammstein", "Red Hot Chili Peppers", "Deep Purple",
+                                        "U2"};
+            /*
+            var query1 = from band in bands
+                         where band.Length == bands.Max(b => b.Length)
+                         select band;
+
+            foreach (var band in query1)
+            {
+                Console.WriteLine(band);
+            }
+
+            var query2 = from band in bands 
+                         where band.Length == bands.Min(b => b.Length)
+                         select band;
+
+            foreach (var band in query2)
+            {
+                Console.WriteLine(band);
+            }
+
+            var query3 = (from band in bands
+                         where band.StartsWith("M")
+                         select band).ToList();
+
+            Console.WriteLine(query3.Count);
+
+            var query4 = from band in bands
+                         where band.Length > 6 orderby band
+                         select band;
+
+            foreach (var band in query4)
+            {
+                Console.WriteLine(band);
+            }
+            */
+            var query5 = (from band in bands
+                         orderby band.Length
+                         select band).ToList();
+
+            foreach (var band in query5)
+            {
+                Console.WriteLine(band);
+            }
+
+            string text = "lol;hej;tjena";
+            Console.WriteLine(text);
+            string[] split = text.Split(';');
+            foreach (var item in split)
+            {
+                Console.WriteLine(item);
+            }
+            string newText = string.Join(";", split);
+
+            Console.WriteLine(newText);
+            
+
             Console.ReadKey();
 
 
