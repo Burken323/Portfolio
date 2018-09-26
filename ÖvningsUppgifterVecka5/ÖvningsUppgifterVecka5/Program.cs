@@ -129,7 +129,7 @@ namespace ÖvningsUppgifterVecka5
             {
                 Console.WriteLine(band);
             }
-            */
+            
             var query5 = (from band in bands
                          orderby band.Length
                          select band).ToList();
@@ -150,6 +150,55 @@ namespace ÖvningsUppgifterVecka5
 
             Console.WriteLine(newText);
             
+
+            List<int> integers = new List<int>() { 54, 23, 76, 123, 93, 7, 3489, 88 };
+
+            var query = (from tal in integers
+                        select tal).Average();
+
+            Console.WriteLine(query);
+
+            var query2 = (from tal in integers
+                         select tal).Max();
+
+            Console.WriteLine(query2);
+
+            var query3 = (from tal in integers
+                          select tal).Min();
+
+            Console.WriteLine(query3);
+
+            var query4 = (from tal in integers
+                          select tal).Sum();
+
+            Console.WriteLine(query4);
+
+            var query5 = from tal in integers
+                         where tal % 2 == 0
+                          select tal;
+
+            foreach (var item in query5)
+            {
+                Console.WriteLine(item);
+            }
+
+            var queryList = Enumerable.Range(1, 10).ToList();
+
+            foreach (var item in queryList)
+            {
+                Console.WriteLine(item);
+            }
+            */
+
+            int[] lista = { 1, 3, 5, 7 };
+
+            var query = (from tal in lista
+                        select tal + 2).ToList();
+
+            foreach (var item in query)
+            {
+                Console.WriteLine(item);
+            }
 
             Console.ReadKey();
 
