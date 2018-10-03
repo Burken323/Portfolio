@@ -188,7 +188,7 @@ namespace ÖvningsUppgifterVecka5
             {
                 Console.WriteLine(item);
             }
-            */
+            
 
             int[] lista = { 1, 3, 5, 7 };
 
@@ -198,7 +198,27 @@ namespace ÖvningsUppgifterVecka5
             foreach (var item in query)
             {
                 Console.WriteLine(item);
+            */
+
+            int[] test = new int[100];
+            Random rnd = new Random();
+
+            for (int i = 0; i < test.Length; i++)
+            {
+                test[i] = rnd.Next(1, 11);
             }
+            int numbers = 0;
+            int result = 0;
+            for (int i = 0; i < test.Length; i++)
+            {
+                if(test[i] % 3 == 0)
+                {
+                    result += test[i];
+                    numbers++;
+                }
+            }
+            double medel = (double)result / numbers;
+            Console.WriteLine("Medelvärde: " + medel);
 
             Console.ReadKey();
 
