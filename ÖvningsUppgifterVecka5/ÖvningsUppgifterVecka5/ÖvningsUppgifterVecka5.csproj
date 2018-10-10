@@ -43,7 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer.cs" />
+    <Compile Include="Human.cs" />
+    <Compile Include="Hund.cs" />
+    <Compile Include="HundOwner.cs" />
+    <Compile Include="Ingredient.cs" />
+    <Compile Include="Instructor.cs" />
     <Compile Include="MyExtensions.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Pizza.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
